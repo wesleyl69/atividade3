@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main()
+{
+    char texto1[50], texto2[50];
+    int i, letra1, letra2;
+
+    puts("Informe o texto 1: ");
+    for (i = 0; letra1 != '\n'; i++)
+    {
+        letra1 = getc(stdin);
+        texto1[i] = letra1;
+    }
+    
+    texto1[i-1] = '\0';
+    
+    puts("Informe o texto 2: ");
+    for (i = 0; letra2 != '\n'; i++)
+    {
+        letra2 = getc(stdin);
+        texto2[i] = letra2;
+    }
+    
+    texto2[i-1] = '\0';
+    
+    printf("%s %s", texto1, texto2);
+
+    return 0;
+}
