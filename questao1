@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main()
+{
+    int texto[50];
+    int numCaracteres = 0, i, letra;
+
+    for(i = 0; letra != '\n'; i++)
+    {
+        letra = getc(stdin);
+        texto[i] = letra;
+        numCaracteres++;
+    }
+
+    printf("%d", numCaracteres - 1);
+
+    return 0;
+}
