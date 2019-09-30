@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int main()
+{
+    char texto1[50], texto2[50];
+    int i, letra1, letra2;
+    int diferentes = 0;
+
+    puts("Informe o texto 1: ");
+    for (i = 0; letra1 != '\n'; i++)
+    {
+        letra1 = getc(stdin);
+        texto1[i] = letra1;
+    }
+    
+    
+    puts("Informe o texto 2: ");
+    for (i = 0; letra2 != '\n'; i++)
+    {
+        letra2 = getc(stdin);
+        texto2[i] = letra2;
+    }
+    
+    for(i = 0; texto1[i] != '\n' || texto2[i] != '\n' ; i++)
+    {
+    	
+    	if(texto1[i] != texto2[i])
+    	{
+    		diferentes = 1;
+		}
+	}
+	
+	if(diferentes == 1){
+		puts("Textos diferentes.");
+	}
+	if(diferentes == 0){
+		puts("Textos iguais.");
+	}
+    
+    return 0;
+}
